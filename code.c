@@ -2,40 +2,27 @@
 #include <stdlib.h>
 #include <math.h>
 
-// void func()
-// {
-//   int i,max,min;
-//   if (s[i]>max)
-//     max=s[i];
-//   if (s[i]<min)
-//     min=s[i];
-//   while(i<10)
-//   {
-//     func();
-//   }
-//   i++;
-// }
+void func(int maxc,int minc,int i)
+{
+  int s;
+  printf("s[%d]=",(i+1));
+  scanf("%d",&s);
+  //printf("max= %d, min= %d\n",maxc,minc);
+  if ((s>maxc)&&(s%3==0))
+    maxc=s;
+  if ((s<minc)&&(s%2==0))
+    minc=s;
+  i++;
+  if (i<10)
+    func(maxc,minc,i);
+  if (i>=10)
+    printf("max= %d,min= %d\n",maxc,minc);
+}
 
 int main()
 {
-  int s[10];
-  int i,max,min;
-  for (i=0;i<10;i++)
-  {
-    printf("s[%d]=",i);
-    scanf("%d",&s[i]);
-  }
-  printf("Вывод массива\n");
-  max=0; min=100000;
-  for (i=0;i<10;i++)
-  {
-    if (s[i]>max)
-      max=s[i];
-    if (s[i]<min)
-      min=s[i];
-    //printf("s[%d]=%d\n",i,s[i]);
-  }
-  printf("max= %d, min= %d\n",max,min);
-  //func();
-
+  int i,maxc,minc;
+  maxc=0; minc=100; i=0;
+  func(maxc,minc,i);
+  return 0;
 }
