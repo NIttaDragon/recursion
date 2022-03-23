@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include "punkt3.2.h"
+#include "punkt2.2.h"
 
 int main()
 {
