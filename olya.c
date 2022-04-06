@@ -11,7 +11,6 @@ void move (int n, char a, char b, char c)
       move(n-1,a,b,c);
       printf("\t %c -> %c \n",a,b);
       move(n-1,b,c,a);
-      //printf("\t %c -> %c \n",b,c);
     }
 }
 int main()
